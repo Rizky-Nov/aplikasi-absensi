@@ -19,7 +19,9 @@
                 </div>
 
                 <div class="logout col-2 d-flex justify-content-end">
-                    <div class="">Ini</div>
+                    <a href="/logout">
+                        <img src="{{ asset('icon/logout.png') }}" style="height: 30px; width: 30px; filter: invert(100%)" alt="">
+                    </a>
                 </div>
             </div>
         </div>

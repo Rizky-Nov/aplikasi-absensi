@@ -4,12 +4,13 @@
 
 <x-title title="Profile">
 <div class="col-12 d-flex flex-column">
-  <div class="col d-flex">
+
+  <form class="col d-flex">
+    @csrf
     <div class="col-3 d-flex flex-column align-items-center">
       <div class="foto-profile">
         <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="w-100 h-100" alt="">
       </div>
-  
       <div class="akunnya w-100">
         <div class="form-group w-100">
           <label for="email">Email</label>
@@ -29,10 +30,10 @@
   
         <div class="separator w-100 mt-2"></div>
       </div>
-  
-      <form action="#" class="col-10">   
+
+      <div class="col-10">
         <div class="data-diri-profile col-12">
-  
+    
           <div class="input-profile">
             <div class="form-group" style="width: 411px">
               <label for="nama-profile">Nama Lengkap</label>
@@ -75,15 +76,14 @@
           </div>
   
         </div>
-      </form>
+      </div>
+      
     </div>
 
-    <div class="col">
-      <form action="" class="w-100 d-flex justify-content-center">
-        <button class="btn btn-success w-100" type="submit">Edit Profile</button>
-      </form>
+    <div class="col w-100 d-flex justify-content-center" style="height: 36px;">
+        <button class="btn text-neutral-10 text-m-regular w-100" style="background: #4ca1af;" type="submit">Profile Edit</button>
     </div>
-  </div>
+  </form>
 
   <div class="col-12 d-flex flex-column align-items-center" style="margin-top: 80px">
     <div class="col-12 d-flex flex-column" style="gap: 24px">
@@ -95,6 +95,7 @@
       </div>
 
       <form action="#" class="col-12 d-flex flex-column align-items-end" style="gap: 24px">
+        @csrf
         <div class="col-12 d-flex" style="gap: 24px">
           <div class="form-group w-100">
             <label for="kode-kelas">Kode Kelas</label>
@@ -108,7 +109,7 @@
         </div>
 
         <div class="col-2" style="padding-right: 48px">
-          <button type="submit" class="w-100 btn btn-success" style="height: 36px;">Buat Kelas</button>
+          <button type="submit" class="w-100 btn text-neutral-10 text-m-regular" style="height: 36px; background: #4ca1af;">Buat Kelas</button>
         </div>
       </form>
     </div>

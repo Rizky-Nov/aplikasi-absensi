@@ -30,15 +30,12 @@
 
                         <p><h2>Login</h2></p>
 
-                        <form action="/" method="POST" class="input-login w-100">
+                        <form action="/login" method="POST" class="input-login w-100">
                             @csrf
                             <div class="form-group w-100">
                               <label for="email">Email</label>
-                              <input autofocus required type="text" 
-                              name="email" id="email" class="form-control w-100" 
-                              placeholder="masukkan email"">
-                            </div>
-                            
+                              <input autofocus required type="text" name="email" id="email" class="form-control w-100" placeholder="masukkan email">
+                            </div>                            
                             <div class="form-group w-100">
                               <label for="password">Password</label>
                               <input required type="password" name="password" id="password" class="form-control w-100" placeholder="masukkan password">

@@ -16,9 +16,7 @@ class IsUser
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role->role == 'user') {
-            return $next($request);
-        } elseif (auth()->user()->role_id == 1) {
+        if (auth()->user()->role->nama_role == 'user') {
             return $next($request);
         }
         return redirect('/user');

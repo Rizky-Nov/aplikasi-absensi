@@ -1,0 +1,67 @@
+.kotak-luar-login {
+    height: 540px;
+    /* background: #4ca1af; */
+
+    display: flex;
+    justify-content: center;
+    
+    background: #FFFFFF;
+
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+.kotak-kiri-login {
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #4ca1af;
+
+    border-radius: 12px 240px 0 12px;
+}  
+
+.kotak-kanan-login {
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF;
+
+    border-radius: 0 12px 12px 240px;
+}
+
+.input-login {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.kotak-luar-sign-up {
+    height: 540px;
+    /* background: #4ca1af; */
+
+    display: flex;
+    
+    background: #FFFFFF;
+
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+.kotak-kiri-sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kotak-kanan-sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} 

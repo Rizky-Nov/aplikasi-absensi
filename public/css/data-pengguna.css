@@ -1,0 +1,59 @@
+.admin-pengguna{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 260px;
+    height: 100px;
+
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.user-pengguna{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: 36px;
+
+    width: 260px;
+    height: 80px;
+
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.gambar-profile{
+    box-sizing: border-box;
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+    width: 120px;
+    height: 90px;
+
+    border: 1px solid #9E9E9E;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.keterangan-profile{
+    box-sizing: border-box;
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+
+    width: 120px;
+    height: 90px;
+
+    border: 1px solid #9E9E9E;
+    border-radius: 0px 12px 12px 0px;
+}

@@ -1,0 +1,129 @@
+.pembuka{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 14px;
+    
+    height: 80px;
+}
+
+.absensi{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    /* gap: 123px; */
+}
+
+.foto{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    /* gap: 10px; */
+    
+    width: 305px;
+    height: 260px;
+
+    background: #EDEDED;
+
+    border: 1px dashed #9E9E9E;
+    border-radius: 12px;
+}
+
+.user-foto{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 305px;
+    height: 260px;
+
+    border: 1px dashed #9E9E9E;
+    border-radius: 12px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+}
+
+.keterangan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 0px;
+}
+
+.pilihan{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 306px;
+    height: 20px;
+}
+
+.CMB{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    width: 86px;
+    height: 20px;
+}
+
+.kotak{
+    box-sizing: border-box;
+
+    width: 16px;
+    height: 16px;
+
+    background: #EDEDED;
+    border: 1px solid #C2C2C2;
+}
+
+.inilah{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    gap: 48px;
+}
+
+.jam{
+    width: 168.5px;
+    height: 32px;
+}
+
+.hari{
+    width: 117px;
+    height: 32px;
+}
+
+.kanan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 24px;
+
+    width: 409px;
+    height: 184px;
+}

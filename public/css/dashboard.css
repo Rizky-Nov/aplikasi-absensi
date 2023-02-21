@@ -1,0 +1,114 @@
+.datas {
+    display: flex;
+    margin-top: 36px;
+    gap: 24px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+
+    width: 220px;
+    height: 120px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #C2C2C2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.separator {
+    border: 1px solid #E0E0E0;
+
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.bagian-atas-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    background: #4CA1AF;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 100px 30px;
+}
+
+.atas-kiri-user-nih {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 12px;
+
+    /* width: 420.5px; */
+    height: 140px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #C2C2C2;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 100px 30px;
+}
+
+.atas-kanan-user-nih {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    /* width: 420.5px; */
+    height: 140px;
+}
+
+.bagian-bawah-isi-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    
+    height: 460px;
+
+    background: #4CA1AF;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 100px 30px;
+}
+
+.bawah-kiri-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    height: 460px;
+}
+
+.bawah-kanan-user {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 12px;
+
+    height: 460px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #C2C2C2;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 100px 30px;
+}

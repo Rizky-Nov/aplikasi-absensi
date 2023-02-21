@@ -1,0 +1,53 @@
+.foto-profile{
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 210px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #9E9E9E;
+    border-radius: 12px;
+}
+
+.foto-profile img{
+    /* width: 198px;
+    height: 210px; */
+    
+    border-radius: 12px;
+}
+
+.akunnya{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    margin-top: 36px;
+}
+
+.data-diri-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+}
+
+/* .data-diri-profile textarea.active{
+    border: #9E9E9E;
+} */
+
+.input-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 18px;
+}
+
+.form-control{
+    height: 48px;
+}

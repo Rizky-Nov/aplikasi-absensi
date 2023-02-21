@@ -47,7 +47,7 @@
                         </form>
 
                         <span style="font-size: 12px; margin-top: 8px">Silahkan Buat Akun, Jika Belum Punya | 
-                            <a href="/create" class="text-decoration-none" style="color: #4ca1af; font-size: 13px">Sign Up</a></span>
+                            <a href="/register" class="text-decoration-none" style="color: #4ca1af; font-size: 13px">Sign Up</a></span>
                     </div>
                 </div>
             </div>

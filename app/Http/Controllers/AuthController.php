@@ -12,6 +12,12 @@ class AuthController extends Controller
     {
         return view('login.login');
     }
+
+    public function register()
+    {
+        return view('login.sign-up');
+    }
+
     public function loginAct(Request $request)
     {
         $credit = $request->validate([
@@ -30,6 +36,7 @@ class AuthController extends Controller
         // dd(Auth::loginUsingId(2));
 
     }
+
     public function logout(Request $request)
     {
         Auth::logout();

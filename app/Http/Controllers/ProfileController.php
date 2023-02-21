@@ -6,13 +6,12 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function AdminProfile()
+    public function Profile()
     {
-        return view('profile.admin-profile');
-    }
-
-    public function UserProfile()
-    {
-        return view('profile.user-profile'); 
+        if (auth()->user()->role->nama_role == 'admin') {
+            return view('profile.admin-profile');            
+        } else {
+            return view('profile.user-profile');
+        }
     }
 }

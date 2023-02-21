@@ -9,7 +9,11 @@ class AdminPageController extends Controller
 {
     public function HalamanUtama()
     {
-        return view('admin.dashboard.admin-dashboard-perhari');
+        if (auth()->user()->role->nama_role == 'user') {
+            return view('user.user-dashboard');            
+        } else {
+            return view('admin.dashboard.admin-dashboard-perhari');
+        }
     }
     
     public function Absensi()

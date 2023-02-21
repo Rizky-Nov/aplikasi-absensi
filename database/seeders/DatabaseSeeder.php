@@ -19,12 +19,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
         Role::create([
             'kode_role' => 'user',
             'nama_role' => 'user',
@@ -35,6 +29,14 @@ class DatabaseSeeder extends Seeder
             'nama_role' => 'admin',
         ]);
 
+        User::factory()->create([
+            'email' => 'user@example.com',
+            'role_id' => 1
+        ]);
+        User::factory()->create([
+            'email' => 'admin@example.com',
+            'role_id' => 2
+        ]);
         User::factory(10)->create();
 
         Profile::factory(10)->create();

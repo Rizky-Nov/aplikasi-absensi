@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> --}}
 
+    <livewire:styles />
+
     <title>Login | Absensi</title>
+
 </head>
 <body>
     <div class="col-12 d-flex justify-content-center align-items-center" style="position: absolute; height: 100vh;">
@@ -21,20 +24,13 @@
     
                 <div class="kotak-kanan-login col-6">
                     <div class="col-8 d-flex flex-column align-items-center justify-content-center">
-                        {{-- @if (session()->has('loginerror'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                {{ session('loginerror') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif --}}
-
                         <p><h2>Login</h2></p>
 
                         <form action="/login" method="POST" class="input-login w-100">
                             @csrf
                             <div class="form-group w-100">
                               <label for="email">Email</label>
-                              <input autofocus required type="text" name="email" id="email" class="form-control w-100" placeholder="masukkan email">
+                              <input autofocus required type="text" name="email" id="email" value="{{ old('email') }}" class="form-control w-100" placeholder="masukkan email">
                             </div>                            
                             <div class="form-group w-100">
                               <label for="password">Password</label>
@@ -67,5 +63,16 @@
             <img src="{{ asset('gambar/coba-1.png') }}" class="w-100 h-50"  alt="">
         </div>
     </div>
+    
+    <livewire:scripts />
+
+    @if (session()->has('BerhasilBuat'))
+        <script>
+            Livewire.emit('toastify', ['success', 'Akun Berhasil Dibuat', 3500]);       
+            console.log('toastify');
+        </script>
+    @endif
+
+    <x-toast />
 </body>
 </html>

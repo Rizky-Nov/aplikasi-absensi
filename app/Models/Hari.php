@@ -9,6 +9,8 @@ class Hari extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function absensi()
     {
         return $this->hasMany(Absensi::class);

@@ -21,7 +21,6 @@
     <div class="form-group w-100">
         <label for="kode">Kode Invite</label>
         <input type="text" wire:model='kodekelas' id="kode" class="form-control w-100" placeholder="masukkan kode invite">
-        @error('kodekelas') <span class="text-danger text-s-regular">{{ $message }}</span> @enderror
     </div>
 
     <div>

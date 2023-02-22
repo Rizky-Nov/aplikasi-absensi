@@ -16,7 +16,7 @@
         
                 <div class="untuk-menu w-100 " style="padding-left: 14px">
                     <div class="menus-luar w-100 h-100">
-                        <a href="/home" class="text-m-medium text-neutral-10 w-100 {{ Request::is('/') ? 'active' : '' }}" style="gap: 8px;">
+                        <a href="/home" class="text-m-medium text-neutral-10 w-100 {{ Request::is('home') ? 'active' : '' }}" style="gap: 8px;">
                             <img src="{{ asset('icon/home.png') }}" class="icon">Dashboard</a>
         
                         <a href="/data-pengguna" class="text-m-medium text-neutral-10 w-100 {{ Request::is('data-pengguna') ? 'active' : '' }}" style="gap: 8px;">
@@ -59,7 +59,7 @@
         
                 <div class="untuk-menu w-100 " style="padding-left: 14px">
                     <div class="menus-luar w-100 h-100">
-                        <a href="/home" class="text-m-regular text-neutral-10 w-100 {{ Request::is('/') ? 'active' : '' }}" style="gap: 8px;">
+                        <a href="/home" class="text-m-regular text-neutral-10 w-100 {{ Request::is('home') ? 'active' : '' }}" style="gap: 8px;">
                             <img src="{{ asset('icon/home.png') }}" class="icon">Dashboard</a>
         
                         <a href="/data-pengguna" class="text-m-regular text-neutral-10 w-100 {{ Request::is('data-pengguna') ? 'active' : '' }}" style="gap: 8px;">

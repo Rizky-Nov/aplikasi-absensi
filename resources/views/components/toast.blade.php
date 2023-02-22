@@ -1,4 +1,4 @@
-@push('scripts')
+{{-- @push('scripts') --}}
     <script>
         let toastColor = {
             'danger' : 'linear-gradient(to right, #e35d5b, #e53935)',
@@ -13,9 +13,10 @@
                 text: text,
                 duration: timer,
                 newWindow: true,
-                close: true,
+                // close: true,
                 stopOnFocus: true,
                 className: 'text-l-medium rounded mt-5 me-5',
+
                 style: {
                     background: toastColor[color],
                 },
@@ -24,4 +25,4 @@
             Livewire.emit('fresh');
         });
     </script>
-@endpush
+{{-- @endpush --}}

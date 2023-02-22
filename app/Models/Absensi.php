@@ -9,6 +9,8 @@ class Absensi extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function hari()
     {
         return $this->belongsTo(Hari::class);

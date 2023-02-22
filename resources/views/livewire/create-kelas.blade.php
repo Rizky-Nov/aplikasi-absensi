@@ -3,12 +3,12 @@
     <div class="col-12 d-flex" style="gap: 24px">
       <div class="form-group w-100">
         <label for="kode-kelas">Kode Kelas</label>
-        <input type="text" wire:model='kodetempat' id="kode-kelas" class="form-control w-100" placeholder="kode kelas">
+        <input type="text" wire:model='kodetempat' id="kode-kelas" class="form-control w-100" placeholder="kode kelas minimal 8 karakter">
       </div>
 
       <div class="form-group w-100">
         <label for="nama-kelas">Nama Kelas</label>
-        <input type="text" wire:model='namatempat' id="nama-kelas" class="form-control w-100" placeholder="nama kelas">
+        <input type="text" wire:model='namatempat' id="nama-kelas" class="form-control w-100" placeholder="nama kelas, diharapkan nama tempat yang benar">
       </div>
     </div>
 

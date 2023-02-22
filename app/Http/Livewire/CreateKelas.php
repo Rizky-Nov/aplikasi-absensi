@@ -7,14 +7,13 @@ use Livewire\Component;
 
 class CreateKelas extends Component
 {
+    public $kodetempat;
+    public $namatempat;
+
     public function render()
     {
         return view('livewire.create-kelas');
     }
-
-    public $kodetempat;
-    public $namatempat;
-
 
     public function store()
     {

@@ -16,7 +16,7 @@
 
     @stack('links')
 
-    {{-- @livewireStyles --}}
+    <livewire:styles />
 
     <title>{{ $title }} | Absensi</title>
 </head>
@@ -46,6 +46,6 @@
 
         @stack('scripts')
 
-        {{-- @livewireScripts --}}
+        <livewire:scripts />
 </body>
 </html>

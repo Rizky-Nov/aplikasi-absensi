@@ -9,6 +9,8 @@ class DetailAbsensi extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function absensi()
     {
         return $this->belongsTo(Absensi::class);

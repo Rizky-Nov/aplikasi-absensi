@@ -4,7 +4,6 @@
             <label for="kode">Kode Admin</label>
             <input type="text" wire:model.debounce='koderole' value="{{ old('kode') }}"
             id="kode" class="form-control w-100" placeholder="masukkan kode untuk admin">
-            @error('koderole') <span class="text-danger text-s-regular">{{ $message }}</span> @enderror
         </div>
     
         <div class="form-group w-100">

@@ -117,7 +117,9 @@
 
     <script scr="{{ asset('vendor/toastify.min.js') }}"></script>
     <livewire:scripts />
+    
     @stack('scripts')
+
     <x-toast />
 </body>
 </html>

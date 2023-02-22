@@ -29,19 +29,19 @@ class DatabaseSeeder extends Seeder
             'nama_role' => 'admin',
         ]);
 
-        User::factory()->create([
-            'email' => 'user@example.com',
-            'role_id' => 1
-        ]);
-        User::factory()->create([
-            'email' => 'admin@example.com',
-            'role_id' => 2
-        ]);
-        User::factory(10)->create();
+        // User::factory()->create([
+        //     'email' => 'user@example.com',
+        //     'role_id' => 1
+        // ]);
+        // User::factory()->create([
+        //     'email' => 'admin@example.com',
+        //     'role_id' => 2
+        // ]);
+        // User::factory(10)->create();
 
-        Profile::factory(10)->create();
+        // Profile::factory(10)->create();
 
-        DetailAbsensi::factory(10)->create();
+        // DetailAbsensi::factory(10)->create();
 
     }
 }

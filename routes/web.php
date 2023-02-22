@@ -27,21 +27,18 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function() {
     Route::get('logout', [AuthController::class, 'logout']);
 
+    Route::get('home', [PageController::class, 'HalamanUtama']);
     Route::get('profile', [ProfileController::class, 'Profile']);
     
+    Route::get('daftar-absensi', [PageController::class, 'Absensi']);
+    Route::get('data-pengguna', [PageController::class, 'DataPengguna']);
+    Route::get('absen-harian', [PageController::class, 'AbsenHariIni']);
+    
     Route::middleware(['isadmin'])->group(function () {
-        Route::get('home', [PageController::class, 'HalamanUtama']);
-        Route::get('daftar-absensi', [PageController::class, 'Absensi']);
-        Route::get('data-pengguna', [PageController::class, 'DataPengguna']);
-        Route::get('absen-harian', [PageController::class, 'AbsenHariIni']);
         Route::get('absen-bulanan', [PageController::class, 'AbseniBulanan']);
     });
     
     Route::middleware(['isuser'])->group(function () {
-        Route::get('home', [PageController::class, 'HalamanUtama']);
-        Route::get('daftar-absensi', [PageController::class, 'Absensi']);
-        Route::get('data-pengguna', [PageController::class, 'DataPengguna']);
-        Route::get('absen-harian', [PageController::class, 'AbsenHariIni']);
         Route::get('data-absen', [PageController::class, 'DataAbsen']);
     });
 });

@@ -29,7 +29,7 @@ class AuthController extends Controller
         if(Auth::attempt($credit)){
             return redirect('/home');
         }
-        return "gagal";
+        return redirect('/')->with('error', 'anda gagal untuk login');
         // $user = User::where('email', 'boyle.amari@example.com')->get();//->where('password', $credit['password'])->get();
         // dd($user);
 

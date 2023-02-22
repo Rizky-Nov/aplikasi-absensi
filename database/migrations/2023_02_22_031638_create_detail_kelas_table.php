@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail_kelas', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('kelas_id')->constrained();
             $table->timestamps();
         });
     }

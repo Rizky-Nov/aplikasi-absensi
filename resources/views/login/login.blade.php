@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,10 @@
 
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('vendor/toastify.min.css') }}">
 
     <livewire:styles />
-
+    {{-- @livewireStyles --}}
     <title>Login | Absensi</title>
 
 </head>
@@ -63,13 +64,17 @@
             <img src="{{ asset('gambar/coba-1.png') }}" class="w-100 h-50"  alt="">
         </div>
     </div>
-    
+
     <livewire:scripts />
+    <script src="{{ asset('vendor/toastify.min.js') }}"></script>
 
     @if (session()->has('BerhasilBuat'))
         <script>
-            Livewire.emit('toastify', ['success', 'Akun Berhasil Dibuat', 3500]);       
-            console.log('toastify');
+         document.addEventListener('DOMContentLoaded', function () {
+             setTimeout(() => {
+                 Livewire.emit('toastify', ['success', 'Berhasil Melakukan Register', 3500]);
+             }, 500);
+         });
         </script>
     @endif
 

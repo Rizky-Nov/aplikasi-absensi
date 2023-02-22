@@ -25,7 +25,7 @@
         <div class="form-group w-100">
             <label for="pw2">Konfirmasi Password</label>
             <input {{ $status == true ? '' : "disabled" }} 
-            wire:model='konfirm' type="password" id="pw2" class="form-control w-100" placeholder="konfirmasi password anda">
+            wire:model.defer='konfirm' type="password" id="pw2" class="form-control w-100" placeholder="konfirmasi password anda">
             @error('konfirm') <span class="text-danger text-s-regular">{{ $message }}</span> @enderror
         </div>
     

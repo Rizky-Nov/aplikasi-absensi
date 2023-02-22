@@ -49,13 +49,7 @@ class CreateAdmin extends Component
             $this->status = true;
             $this->roleid = $cek[0]->id;
         }
-
-        if ($propertyName != 'konfirm') {
-            $this->validateOnly($propertyName);
-        }
-
-        // $this->emit('toastify', ['success', 'Akun Berhasil Dibuat', 3000]);
-
+        $this->validateOnly($propertyName);
     }
     
     public function store()

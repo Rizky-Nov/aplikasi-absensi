@@ -17,9 +17,9 @@ class CreateAdmin extends Component
     public $koderole;
     public $email;
     public $password;
-    public $alert;
     public $status;
     public $roleid;
+    public $konfirm;
 
     protected $rules = [
         'email' => 'required|email|unique:users',
@@ -28,14 +28,14 @@ class CreateAdmin extends Component
     ];
 
     protected $messages = [
-        'konfirm.same' => 'Password Tidak Sama',
+        'konfirm.same' => 'password tidak berbeda',
 
-        'email.required' => 'Email Tidak Boleh Kosong',
-        'email.unique' => 'Email Sudah Dipakai',
-        'email.email' => 'Format Email Tidak Valid',
+        'email.required' => 'email tidak boleh kosong',
+        'email.unique' => 'email sudah dipakai',
+        'email.email' => 'format email tidak valid',
 
-        'password.required' => 'Password Tidak Boleh Kosong',
-        'password.min' => 'Minimal 6 Karakter',
+        'password.required' => 'password tidak boleh kosong',
+        'password.min' => 'minimal 6 karakter',
     ];  
 
     function updated($propertyName)
@@ -50,15 +50,14 @@ class CreateAdmin extends Component
             $this->roleid = $cek[0]->id;
         }
 
-        $this->validateOnly($propertyName);
+        if ($propertyName != 'konfirm') {
+            $this->validateOnly($propertyName);
+        }
+
     }
     
-    public $konfirm;
-
     public function store()
     {
-        
-
         if ($this->status == true) {
             $this->validate();
 

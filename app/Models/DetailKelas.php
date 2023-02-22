@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kelas extends Model
+class DetailKelas extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,8 @@ class Kelas extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function detail_kelas()
+    public function kelas()
     {
-        return $this->hasMany(DetailKelas::class);
+        return $this->belongsTo(Kelas::class);
     }
 }

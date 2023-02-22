@@ -42,7 +42,7 @@ class User extends Authenticatable
 
     public function kelas()
     {
-        return $this->belongsTo(Kelas::class);
+        return $this->hasOne(Kelas::class);
     }
 
     public function role()
@@ -52,7 +52,12 @@ class User extends Authenticatable
 
     public function profile()
     {
-        return $this->hasMany(Profile::class);
+        return $this->hasOne(Profile::class);
+    }
+
+    public function detail_kelas()
+    {
+        return $this->hasMany(DetailKelas::class);
     }
 
 }

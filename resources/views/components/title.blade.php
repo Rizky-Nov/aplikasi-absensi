@@ -44,7 +44,7 @@
         </div>
         @endif
 
-        @stack('script')
+        @stack('scripts')
 
         {{-- @livewireScripts --}}
 </body>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Profile;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -63,10 +64,14 @@ class CreateAdmin extends Component
         if ($this->status == true) {
             $this->validate();
 
-            User::create([
+            $user = User::create([
                 'role_id' => $this->roleid,
                 'email' => $this->email,
                 'password' => bcrypt($this->password),
+            ]);
+
+            Profile::create([
+                'user_id' => $user->id,
             ]);
 
         } else {

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\DetailKelas;
 use App\Models\Kelas;
+use App\Models\Profile;
 use App\Models\User;
 use Livewire\Component;
 
@@ -68,6 +69,10 @@ class CreateUser extends Component
         DetailKelas::create([
             'user_id' => $user->id,
             'kelas_id' => $this->kelasid,
+        ]);
+
+        Profile::create([
+            'user_id' => $user->id,
         ]);
 
         return redirect('/')->with('BerhasilBuat', 'Akun Berhasil Dibuat');

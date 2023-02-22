@@ -9,7 +9,7 @@
                 <p class="text-m-medium text-neutral-100">Jumlah Pengguna</p>
 
                 <div class="separator w-100"></div>
-                {{ auth()->user()->profile }}
+                {{-- {{ auth()->user()->profile }} --}}
             </div>
             
             <div class="data">

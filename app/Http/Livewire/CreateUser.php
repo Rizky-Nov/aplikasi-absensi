@@ -25,10 +25,13 @@ class CreateUser extends Component
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|alpha_num',
         'konfirm' => 'required|same:password',
+        'kodekelas' => 'required|same:kelas,kode_tempat',
     ];
 
     protected $messages = [
         'konfirm.same' => 'password tidak berbeda',
+        'kodekelas.required' => 'harus menggunakan kode',
+        'kodekelas.same' => 'kode tidak ada atau tidak sama',
 
         'email.required' => 'email tidak boleh kosong',
         'email.unique' => 'email sudah dipakai',
@@ -48,7 +51,7 @@ class CreateUser extends Component
             $this->kelasid = $cek[0]->id;
         }
 
-        if ($propertyName != 'konfirm' ) {
+        if ($propertyName != 'konfirm' || $propertyName != 'kodekelas' ) {
             $this->validateOnly($propertyName);
         } 
     }

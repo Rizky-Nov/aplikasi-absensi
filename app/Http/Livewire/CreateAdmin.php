@@ -25,10 +25,13 @@ class CreateAdmin extends Component
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|alpha_num',
         'konfirm' => 'required|same:password',
+        'koderole' => 'required|same:roles,kode_role',
     ];
 
     protected $messages = [
         'konfirm.same' => 'password tidak berbeda',
+        'koderole.required' => 'harus memasukkan kode sebagai admin',
+        'koderole.same' => 'kode tidak ada atau tidak ada',
 
         'email.required' => 'email tidak boleh kosong',
         'email.unique' => 'email sudah dipakai',
@@ -50,7 +53,7 @@ class CreateAdmin extends Component
             $this->roleid = $cek[0]->id;
         }
 
-        if ($propertyName != 'konfirm') {
+        if ($propertyName != 'konfirm' || $propertyName != 'koderole' ) {
             $this->validateOnly($propertyName);
         }
 

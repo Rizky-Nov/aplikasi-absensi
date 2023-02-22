@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/side-bar.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/toastify.min.css') }}">
 
     <style>
         .awal {
@@ -114,6 +115,9 @@
         });
     </script>
 
+    <script scr="{{ asset('vendor/toastify.min.js') }}"></script>
     <livewire:scripts />
+    @stack('scripts')
+    <x-toast />
 </body>
 </html>

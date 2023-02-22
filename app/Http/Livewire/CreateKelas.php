@@ -18,6 +18,7 @@ class CreateKelas extends Component
     public function store()
     {
         Kelas::create([
+            'user_id' => auth()->user()->id,
             'kode_tempat' => $this->kodetempat,
             'nama_tempat' => $this->namatempat,
         ]);

@@ -13,6 +13,10 @@
     border-radius: 12px;
 }
 
+input[disabled], textarea[disabled] {
+    background-color: #FFFFFF !important;
+}
+
 .foto-profile img{
     /* width: 198px;
     height: 210px; */

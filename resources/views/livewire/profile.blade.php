@@ -21,7 +21,7 @@
 
   <div class="col-8 d-flex flex-column align-items-center" style="gap: 36px">
     <div class="col-8">
-      {{-- <span class="w-100 d-flex justify-content-center header-s text-neutral-90">{{ auth()->user()->kelas->nama_tempat }}</span> --}}
+      <span class="w-100 d-flex justify-content-center header-m text-neutral-90">{{ auth()->user()->detail_kelas[0]->kelas->nama_tempat }}</span>
 
       <div class="separator w-100 mt-2"></div>
     </div>
@@ -63,7 +63,6 @@
             <input type="text" {{ $status ? '' : "disabled" }} wire:model='agama'
             id="Agama-profile" class="form-control w-100" placeholder="agama">
           </div>
-
           <div class="form-group" style="width: 304.5px">
             <label for="JK-profile">Jenis Kelamin</label>
             <input type="text" {{ $status ? '' : "disabled" }} wire:model='jk'
@@ -84,6 +83,6 @@
 
   <div class="col w-100 d-flex justify-content-center" style="height: 36px;">
       <button class="btn text-neutral-10 text-m-regular w-100"
-      style="background: #4ca1af;" type="submit">Profile Edit</button>
+      style="background: #4ca1af;" type="submit">{{ $status ? 'Simpan' : 'Edit Profile' }}</button>
   </div>
 </form>

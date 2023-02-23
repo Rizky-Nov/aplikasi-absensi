@@ -28,7 +28,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('logout', [AuthController::class, 'logout']);
 
     Route::get('home', [PageController::class, 'HalamanUtama']);
-    Route::get('profile', [ProfileController::class, 'Profile']);
+    Route::get('profile/{profile}', [ProfileController::class, 'Profile']);
     
     Route::get('daftar-absensi', [PageController::class, 'Absensi']);
     Route::get('data-pengguna', [PageController::class, 'DataPengguna']);

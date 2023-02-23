@@ -1,4 +1,4 @@
-@if (Request::is('profile'))
+@if (Request::is('profile*'))
     <div class="luar container-fluid p-0 m-0">
         <div class="judul col-12 header-m p-0 m-0">
             <div class="col-6 d-flex">
@@ -9,14 +9,12 @@
                     <p class="text-neutral-10 header-l">@yield('judul')</p>
                 </div>
             </div>
-
             <div class="col d-flex align-items-end flex-column">
                 <div class="PL col-7 me-4 d-flex p-0 m-0 h-100">
                     <div class="w-100" style="position: relative;">
                         <a href="/home">
                             <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt="">
-                        </a>
-            
+                        </a>            
                         <a class="apaini text-m-medium text-neutral-10 w-100">
                             <span class="header-s text-neutral-10">Ini Adalah Nama Pengguna</span>
                         </a>
@@ -33,11 +31,10 @@
             <div class="nama col-6">
                 <p class="text-neutral-10 header-l">@yield('judul')</p>
             </div>
-
             <div class="col d-flex align-items-end flex-column">
                 <div class="PL col-7 me-4 d-flex p-0 m-0 h-100">
                     <div class="w-100" style="position: relative;">
-                        <a href="/profile">
+                        <a href="/profile/{{ auth()->user()->profile->id }}">
                             <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt="">
                         </a>
             

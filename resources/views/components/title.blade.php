@@ -22,7 +22,7 @@
 </head>
 <body style="background: #FFFFFF; padding-bottom: 48px">
     <div class="p-0 m-0" style="background: #4ca1af">
-        @if (Request::is('profile'))
+        @if (Request::is('profile/*'))
             @include('header')
             
             <div class="d-flex justify-content-end m-0 p-0 " style="background: #FFFFFF;  border-radius:36px 36px 0px 0px;">

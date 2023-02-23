@@ -54,3 +54,11 @@
     align-items: center;
     padding: 8px;
 }
+
+.logout a:hover {
+    color: #0e0e0e;
+}
+
+a.apaini {
+    color: #FFFFFF;
+}

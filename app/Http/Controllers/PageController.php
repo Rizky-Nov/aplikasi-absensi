@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\DetailAbsensi;
+use App\Models\Profile;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -27,10 +29,16 @@ class PageController extends Controller
 
     public function DataPengguna()
     {
+        $datapengguna = Profile::orderByDesc('nama_lengkap');
+
         if (auth()->user()->role->nama_role == 'admin') {
-            return view('admin.admin-data-pengguna');
+            return view('admin.admin-data-pengguna', [
+                '$datapenggunas' => $datapengguna->get(),
+            ]);
         } else {
-            return view('user.user-data-pengguna');
+            return view('user.user-data-pengguna', [
+                'datapenggunas' => $datapengguna->get(),
+            ]);
         }
     }
 

@@ -18,7 +18,7 @@
                         </a>
             
                         <a class="apaini text-m-medium text-neutral-10 w-100">
-                            <span class="header-s text-neutral-10">Ini Adalah Nama Pengguna</span>
+                            <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>
                         </a>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                             <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt="">
                         </a>
             
-                        <span class="header-s text-neutral-10">Ini Adalah Nama Pengguna</span>
+                        <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>
 
                         <a class="apaini text-m-medium text-neutral-10 cursor-pointer" data-bs-toggle="collapse" data-bs-target="#dropdown-menu-logout">
-                            <i class="fa-solid fa-ellipsis-vertical ms-3" style="font-size: 20px; width: 30px" aria-hidden="true"></i>
+                            <i class="fa-solid fa-ellipsis-vertical ms-3 " style="font-size: 16px;" aria-hidden="true"></i>
                         </a>
             
                         <div class="logout w-100 collapse  {{ Request::is('logout') ? 'show' : '' }}" style="margin-right: 36px; position: absolute" id="dropdown-menu-logout">

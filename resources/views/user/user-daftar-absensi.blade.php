@@ -27,8 +27,8 @@
                 <div class="col-6">
                     <form action="#" class="input w-100">
                         <div class="form-group w-100">
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" name="" id="nama" class="form-control w-100" placeholder="masukkan nama anda">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" name="" id="nama" class="form-control w-100" placeholder="masukkan nama anda">
                         </div>
                         
                         <div class="d-flex">
@@ -58,7 +58,6 @@
                             
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

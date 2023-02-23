@@ -10,6 +10,8 @@ class Profile extends Component
 {
     public $status = false;
 
+    public $profile_id;
+    public $userid;
     public $namalengkap;
     public $alamat;
     public $notelp;
@@ -17,30 +19,12 @@ class Profile extends Component
     public $jk;
     public $tempatlahir;
     public $tgllahir;
-    public $userid;
-
-    public function render()
+    
+    public function mount($profile)
     {
-        return view('livewire.profile', [
-            'password' => Str::limit(auth()->user()->password, 10, '')
-        ]);
-    }
-
-    function setStatus()
-    {
-        if ($this->status == false) {
-            $this->status = true;
-        } elseif ($this->status == true) {
-            $this->status = false;
-            $this->getProfile(auth()->user()->id);
-        }
-    }
-
-    public function getProfile($id)
-    {
-        $profile = ModelsProfile::find($id);
-        
+        $this->profile_id = $profile->id;
         $this->userid = $profile->user_id;
+        $this->namalengkap = $profile->nama_lengkap;
         $this->alamat = $profile->alamat;
         $this->notelp = $profile->no_telp;
         $this->agama = $profile->agama;
@@ -49,10 +33,19 @@ class Profile extends Component
         $this->tgllahir = $profile->tgl_lahir;
     }
 
-    public function edit()
+    function setStatus()
     {
-        $getprofile = ModelsProfile::find($this->userid);
+        if ($this->status == false) {
+            $this->status = true;
+        } elseif ($this->status == true) {
+            $this->edit();
+            $this->status = false;
+        }
+    }
 
+    public function edit()
+    {   
+        $getprofile = ModelsProfile::find($this->profile_id);
         $getprofile->update([
             'nama_lengkap' => $this->namalengkap,
             'alamat' => $this->alamat,
@@ -62,7 +55,12 @@ class Profile extends Component
             'tempat_lahir' => $this->tempatlahir,
             'tgl_lahir' => $this->tgllahir,
         ]);
+    }
 
-        $this->render();
+    public function render()
+    {
+        return view('livewire.profile', [
+            'password' => Str::limit(auth()->user()->password, 10, ''), 
+        ]);
     }
 }

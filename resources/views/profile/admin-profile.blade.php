@@ -5,8 +5,9 @@
 <x-title title="Profile">
 <div class="col-12 d-flex flex-column">
 
-  <livewire:profile />
+  <livewire:profile :profile="$profile"/>
 
+  @can('IsAdmin')
   <div class="col-12 d-flex flex-column align-items-center" style="margin-top: 80px">
     <div class="col-12 d-flex flex-column" style="gap: 24px">
       <div class="separator w-100"></div>
@@ -15,10 +16,10 @@
         <span class="header-m text-neutral-100">Buat Kelas</span>
         <span class="text-s-medium text-neutral-80">Kelas ini dibuat untuk user melakukan Sign-Up menggunakan kode kelas !</span>
       </div>
-
-      <livewire:create-kelas />
+        <livewire:create-kelas />
       
     </div>
   </div>
+      @endcan
 </div>
 </x-title>

@@ -24,16 +24,10 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-
-        // dd($credit['email']);
         if(Auth::attempt($credit)){
             return redirect('/home');
         }
         return redirect('/')->with('error', 'anda gagal untuk login');
-        // $user = User::where('email', 'boyle.amari@example.com')->get();//->where('password', $credit['password'])->get();
-        // dd($user);
-
-        // dd(Auth::loginUsingId(2));
 
     }
 

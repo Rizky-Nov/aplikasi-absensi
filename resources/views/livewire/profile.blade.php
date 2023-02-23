@@ -21,8 +21,9 @@
 
   <div class="col-8 d-flex flex-column align-items-center" style="gap: 36px">
     <div class="col-8">
-      <span class="w-100 d-flex justify-content-center header-m text-neutral-90">{{ auth()->user()->detail_kelas[0]->kelas->nama_tempat }}</span>
-
+      @can('IsUser')
+        <span class="w-100 d-flex justify-content-center header-m text-neutral-90">{{ auth()->user()->detail_kelas[0]->kelas->nama_tempat }}</span>
+      @endcan
       <div class="separator w-100 mt-2"></div>
     </div>
 

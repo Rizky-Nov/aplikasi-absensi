@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\DetailAbsensi;
+use App\Models\Hari;
 use App\Models\Profile;
 use App\Models\Role;
 use App\Models\User;
@@ -28,6 +29,10 @@ class DatabaseSeeder extends Seeder
             'kode_role' => 'admin',
             'nama_role' => 'admin',
         ]);
+
+        // Hari::create([
+        //     'hari' => ''
+        // ]);
 
         // User::factory()->create([
         //     'email' => 'user@example.com',

@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->integer('kode_tempat');
-            $table->string('nama_tempat');
+            $table->integer('kode_tempat')->nullable();
+            $table->string('nama_tempat')->nullable();
             $table->timestamps();
         });
     }

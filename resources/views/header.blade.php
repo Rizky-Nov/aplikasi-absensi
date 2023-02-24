@@ -36,11 +36,6 @@
                     <div class="w-100" style="position: relative;">
                         <a href="/profile/{{ auth()->user()->profile->id }}">
                             <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt="">
-                            {{-- @if (auth()->user()->profile->)
-                            
-                            @else
-                            
-                            @endif --}}
                         </a>
             
                         <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>

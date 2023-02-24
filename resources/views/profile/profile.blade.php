@@ -16,7 +16,7 @@
         <span class="header-m text-neutral-100">Buat Kelas</span>
         <span class="text-s-medium text-neutral-80">Kelas ini dibuat untuk user melakukan Sign-Up menggunakan kode kelas !</span>
       </div>
-        <livewire:create-kelas />
+        <livewire:create-kelas :kelas="auth()->user()->kelas"/>
       
     </div>
   </div>

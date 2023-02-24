@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/toastify.min.css') }}">
 
     <livewire:styles />
-    {{-- @livewireStyles --}}
+    
     <title>Login | Absensi</title>
 
 </head>
@@ -68,7 +68,7 @@
     <livewire:scripts />
     <script src="{{ asset('vendor/toastify.min.js') }}"></script>
 
-    @if (session()->has('BerhasilBuat'))
+    @if (session()->has('Berhasil Register'))
         <script>
          document.addEventListener('DOMContentLoaded', function () {
              setTimeout(() => {

@@ -33,7 +33,7 @@ class PageController extends Controller
 
         if (auth()->user()->role->nama_role == 'admin') {
             return view('admin.admin-data-pengguna', [
-                '$datapenggunas' => $datapengguna->get(),
+                'datapenggunas' => $datapengguna->get(),
             ]);
         } else {
             return view('user.user-data-pengguna', [

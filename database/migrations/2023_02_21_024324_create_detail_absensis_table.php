@@ -14,12 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail_absensis', function (Blueprint $table) {
-            // $table->foreignId('absensi_id')->constrained();
+            $table->foreignId('absensi_id')->constrained();
             $table->foreignId('profile_id')->constrained();
             $table->time('jam_absen');
             $table->string('absen');
             $table->string('keterangan');
-            $table->string('foto');
             $table->timestamps();
         });
     }

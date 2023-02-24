@@ -9,13 +9,16 @@
                 <p class="text-m-medium text-neutral-100">Jumlah Pengguna</p>
 
                 <div class="separator w-100"></div>
-                {{-- {{ auth()->user()->profile }} --}}
             </div>
             
             <div class="data">
                 <p class="text-m-medium text-neutral-100">Absen Hari Ini</p>
 
                 <div class="separator w-100"></div>
+
+                <div class="">
+                    {{ date('H-i-s') }}
+                </div>
             </div>
             
             <div class="data">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Kelas;
 use App\Models\Profile;
 use App\Models\Role;
 use App\Models\User;
@@ -65,6 +66,10 @@ class CreateAdmin extends Component
             ]);
 
             Profile::create([
+                'user_id' => $user->id,
+            ]);
+
+            Kelas::create([
                 'user_id' => $user->id,
             ]);
 

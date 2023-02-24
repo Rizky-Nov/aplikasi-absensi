@@ -19,6 +19,20 @@ class Profile extends Component
     public $jk;
     public $tempatlahir;
     public $tgllahir;
+
+    protected $listeners = [
+        'setagama',
+        'setjk',
+    ];
+
+    
+    protected $rules = [
+        'notelp' => 'numeric',
+    ];
+
+    protected $messages = [
+        'notelp' => 'masukkan nomor yang benar',
+    ];
     
     public function mount($profile)
     {
@@ -32,6 +46,21 @@ class Profile extends Component
         $this->tempatlahir = $profile->tempat_lahir;
         $this->tgllahir = $profile->tgl_lahir;
     }
+    
+    public function setagama($value)
+    {
+        $this->agama = $value;
+    }
+
+    public function setjk($value)
+    {
+        $this->jk = $value;
+    }
+
+    // function updated($propertyName)
+    // {
+    //     $this->validateOnly($propertyName);
+    // }
 
     function setStatus()
     {
@@ -46,6 +75,8 @@ class Profile extends Component
     public function edit()
     {   
         $getprofile = ModelsProfile::find($this->profile_id);
+        // $this->validate();
+        
         $getprofile->update([
             'nama_lengkap' => $this->namalengkap,
             'alamat' => $this->alamat,

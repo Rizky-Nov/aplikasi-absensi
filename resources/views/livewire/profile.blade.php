@@ -61,13 +61,21 @@
         <div class="input-profile">
           <div class="form-group" style="width: 304.5px">
             <label for="Agama-profile">Agama</label>
-            <input type="text" {{ $status ? '' : "disabled" }} wire:model='agama'
-            id="Agama-profile" class="form-control w-100" placeholder="agama">
+            <select wire:change='$emit("getagama")' {{ $status ? '' : "disabled" }} class="w-100" id="Agama-profile">
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Protestan">Protestan</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Budha">Budha</option>
+            </select>
           </div>
+
           <div class="form-group" style="width: 304.5px">
             <label for="JK-profile">Jenis Kelamin</label>
-            <input type="text" {{ $status ? '' : "disabled" }} wire:model='jk'
-            id="JK-profile" class="form-control w-100" placeholder="jenis kelamin">
+            <select wire:change='$emit("getjk")' wire:ignore {{ $status ? '' : "disabled" }} class="w-100" id="JK-profile">
+              <option value="Laki-Laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
           </div>
         </div>
 
@@ -87,3 +95,17 @@
       style="background: #4ca1af;" type="submit">{{ $status ? 'Simpan' : 'Edit Profile' }}</button>
   </div>
 </form>
+
+@push('scripts')
+  <script>
+    Livewire.on('getagama', function () {
+      var value = document.querySelector('#Agama-profile').value;
+      Livewire.emit('setagama', value);
+    })
+
+    Livewire.on('getjk', function () {
+      var value = document.querySelector('#JK-profile').value;
+      Livewire.emit('setjk', value);
+    })
+  </script>
+@endpush

@@ -23,7 +23,7 @@
                             <div class="col-12 d-flex flex-column" style="margin-top: 48px;">
                                 <div class="admin-pengguna">
                                     <div class="gambar-profile w-100 h-100">
-                                        <span class="text-neutral-70 text-m-medium">{{ asset('storage/' . $datapengguna->foto) }}</span>
+                                        <span class="text-neutral-70 text-m-medium"><img src="{{ asset('storage/' . $datapengguna->foto) }}" alt=""></span>
                                     </div>
                     
                                     <div class="keterangan-profile w-100 h-100">

@@ -44,8 +44,8 @@
         </div>
         @endif
 
-        @stack('scripts')
-
         <livewire:scripts />
+        
+        @stack('scripts')
 </body>
 </html>

@@ -10,7 +10,7 @@
                     <div class="separator w-100"></div>
 
                     <div class="d-flex flex-column align-items-center">
-                        <span class="text-m-medium text-neutral-100">Nama Yang Sedang Login</span>
+                        <span class="text-m-medium text-neutral-100">{{ auth()->user()->profile->nama_lengkap }}</span>
                         <span class="text-s-regular text-neutral-100">Jangan Lupa Untuk Absen Ya</span>
                     </div>
                 </div>

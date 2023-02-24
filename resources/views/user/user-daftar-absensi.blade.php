@@ -25,39 +25,9 @@
                 </div>
 
                 <div class="col-6">
-                    <form action="#" class="input w-100">
-                        <div class="form-group w-100">
-                            <label for="nama">Nama Lengkap</label>
-                            <input type="text" name="" id="nama" class="form-control w-100" placeholder="masukkan nama anda">
-                        </div>
-                        
-                        <div class="d-flex">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hadir">
-                                <label class="form-check-label" for="hadir">Hadir</label>
-                            </div>
-                            
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sakit">
-                                <label class="form-check-label" for="sakit">Sakit</label>
-                            </div>
-                            
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="izin">
-                                <label class="form-check-label" for="izin">Izin</label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group d-flex flex-column w-100">
-                            <label for="keterangan">Keterangan</label>
-                            <textarea name="" id="keterangan" class="w-100 border p-2" cols="30" rows="7" placeholder="keterangan ketidak hadiran"></textarea>
-                        </div>
+                    
+                    <livewire:absensi-user />
 
-                        <div class="w-100 d-flex justify-content-end" style="padding-right: 36px;">
-                            <button type="submit" class="btn btn-success d-flex justify-content-center align-items-center" style="width: 100px; height: 32px;">Kirim</button>
-                            
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

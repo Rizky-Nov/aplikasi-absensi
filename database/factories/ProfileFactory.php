@@ -17,15 +17,15 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => fake()->randomNumber(1, true),
-            'nama_lengkap' => fake()->shuffle('kataapasajabisakok'),
-            'kelas' => fake()->randomElement(['PT Usaha Bisa', 'PT Semua Bisa Kerja']),
+            'user_id' => fake()->unique->randomNumber(1, true),
+            'nama_lengkap' => fake()->randomElement(['Fauzi', 'Yukie', 'Udin', 'Jamal', 'Siapa']),
             'alamat' => fake()->randomElement(['Bandung Barat Di Timur', 'Cimahi Timur Pindah Barat']),
             'no_telp' => fake()->randomNumber(9, true),
             'agama' => fake()->randomElement(['Islam', 'Kristen', 'Budha']),
             'jenis_kelamin' => fake()->randomElement(['Laki-Laki', 'Perempuan']),
             'tempat_lahir' => fake()->randomElement(['Bandung Di Timur', 'Cimahi', 'Isekai']),
             'tgl_lahir' => fake()->date(),
+            'foto' => 'profile/profile-contoh.jpg',
 
             // $table->foreignId('user_id')->constrained();
             // $table->string('nama_lengkap');

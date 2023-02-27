@@ -18,8 +18,7 @@
                         <p>Icon</p>
 
                         <div class="keterangan">
-                            <span class="text-neutral-60 text-s-regular">Maksimal 1mb</span>
-                            <span class="text-neutral-70 text-m-medium">Drag and Drop here or Select File ! ! !</span>
+                            <img src="{{ asset('storage/' . auth()->user()->profile->foto) }}" alt="">
                         </div>
                     </div>
                 </div>

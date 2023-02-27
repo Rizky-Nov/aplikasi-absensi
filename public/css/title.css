@@ -9,9 +9,8 @@
 
 .judul{
     color: #FFFFFF;
-
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 0px 0px 14px 14px;
 }
 
@@ -26,24 +25,14 @@
     height: 50px;
     width: 50px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 100px;
     background: #FFFFFF;
 }
 
-.kotak-profile img {
-    height: 50px;
-    width: 50px;
-
-    border-radius: 100px;
-}
-
-.PL{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-}
 
 .kembali a:hover{
     color: #0e0e0e;

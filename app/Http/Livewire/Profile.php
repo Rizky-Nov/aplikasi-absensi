@@ -5,9 +5,12 @@ namespace App\Http\Livewire;
 use App\Models\Profile as ModelsProfile;
 use Illuminate\Support\Str;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Profile extends Component
 {
+    use WithFileUploads;
+
     public $status = false;
 
     public $profile_id;
@@ -19,20 +22,7 @@ class Profile extends Component
     public $jk;
     public $tempatlahir;
     public $tgllahir;
-
-    protected $listeners = [
-        'setagama',
-        'setjk',
-    ];
-
-    
-    protected $rules = [
-        'notelp' => 'numeric',
-    ];
-
-    protected $messages = [
-        'notelp' => 'masukkan nomor yang benar',
-    ];
+    public $foto;
     
     public function mount($profile)
     {
@@ -44,23 +34,8 @@ class Profile extends Component
         $this->agama = $profile->agama;
         $this->jk = $profile->jenis_kelamin;
         $this->tempatlahir = $profile->tempat_lahir;
-        $this->tgllahir = $profile->tgl_lahir;
+        $this->foto = $profile->foto;
     }
-    
-    public function setagama($value)
-    {
-        $this->agama = $value;
-    }
-
-    public function setjk($value)
-    {
-        $this->jk = $value;
-    }
-
-    // function updated($propertyName)
-    // {
-    //     $this->validateOnly($propertyName);
-    // }
 
     function setStatus()
     {
@@ -75,7 +50,11 @@ class Profile extends Component
     public function edit()
     {   
         $getprofile = ModelsProfile::find($this->profile_id);
-        // $this->validate();
+        $this->validate([
+            'foto' => 'image|max:2048'
+        ]);
+
+        $url = $this->foto->store('foto-profile');
         
         $getprofile->update([
             'nama_lengkap' => $this->namalengkap,
@@ -85,6 +64,7 @@ class Profile extends Component
             'jenis_kelamin' => $this->jk,
             'tempat_lahir' => $this->tempatlahir,
             'tgl_lahir' => $this->tgllahir,
+            'foto' => $url,
         ]);
     }
 

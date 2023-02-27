@@ -24,7 +24,7 @@
     <div class="form-group d-flex flex-column w-100">
         <label for="keterangan">Keterangan</label>
         <textarea name="" id="keterangan" 
-        wire:model.lazy='keterangan' class="w-100 border p-2 rounded-2" 
+        wire:model.lazy='keterangan' class=" p-2 input-form input-form-lg h-auto placeholder-m-r" 
         rows="6" placeholder="keterangan ketidak hadiran"></textarea>
     </div>
 

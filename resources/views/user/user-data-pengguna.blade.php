@@ -11,8 +11,6 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th></th>
-                    <th></th>
                 </tr>
             </thead>
 
@@ -20,21 +18,21 @@
                 <tr>
                     @foreach ($datapenggunas as $datapengguna)
                         <td>
-                            <div class="col-12 d-flex flex-column">
+                            <div class="col-12 d-flex flex-column ms-4">
                                 <div class="user-pengguna">
                                     <div class="gambar-profile w-100 h-100">
-                                        <span class="text-neutral-70 text-m-medium">{{ asset('storage/' . $datapengguna->foto) }}</span>
+                                        <img src="{{ asset('storage/' . $datapengguna->profile->foto) }}" class="foto-pengguna w-100 h-100" alt="">
                                     </div>
                             
                                     <div class="keterangan-profile w-100 h-100">
-                                        <span class="text-s-medium text-neutral-100">{{ $datapengguna->nama_lengkap }}</span>
-                                        <span class="text-s-medium text-neutral-100">{{ $datapengguna->agama }}</span>
+                                        <span class="text-s-medium text-neutral-100">{{ $datapengguna->profile->nama_lengkap }}</span>
+                                        <span class="text-s-medium text-neutral-100">{{ $datapengguna->profile->agama }}</span>
                                     </div>
                                 </div>
                             </div>
                         </td>
 
-                        @if ($loop->iteration %6 == 0)
+                        @if ($loop->iteration %4 == 0)
                             </tr>
                             
                             <tr>

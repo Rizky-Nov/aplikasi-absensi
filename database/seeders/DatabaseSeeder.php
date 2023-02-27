@@ -35,13 +35,35 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // User::factory()->create([
-        //     'email' => 'user@example.com',
-        //     'role_id' => 1
-        // ]);
-        // User::factory()->create([
-        //     'email' => 'admin@example.com',
+        //     'email' => 'admin@gmail.com',
+        //     'password' => 'admin123',
         //     'role_id' => 2
         // ]);
+
+        // User::factory()->create([
+        //     'email' => 'user@gmail.com',
+        //     'password' => 'user123',
+        //     'role_id' => 1
+        // ]);
+        
+        // User::factory()->create([
+        //     'email' => 'user1@gmail.com',
+        //     'password' => 'user123',
+        //     'role_id' => 1
+        // ]);
+
+        // User::factory()->create([
+        //     'email' => 'user2@gmail.com',
+        //     'password' => 'user123',
+        //     'role_id' => 1
+        // ]);
+
+        // User::factory()->create([
+        //     'email' => 'user3@gmail.com',
+        //     'password' => 'user123',
+        //     'role_id' => 1
+        // ]);
+
         // User::factory(10)->create();
 
         // Profile::factory(10)->create();

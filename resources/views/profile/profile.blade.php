@@ -8,7 +8,7 @@
   <livewire:profile :profile="$profile"/>
 
   @can('IsAdmin')
-  <div class="col-12 d-flex flex-column align-items-center" style="margin-top: 80px">
+  <div class="col-12 d-flex flex-column align-items-center" style="margin-top: 100px">
     <div class="col-12 d-flex flex-column" style="gap: 24px">
       <div class="separator w-100"></div>
 

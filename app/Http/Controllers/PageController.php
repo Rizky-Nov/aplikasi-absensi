@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    public function Coba()
+    {
+        return view('coba');
+    }
+
     public function HalamanUtama()
     {
         if (auth()->user()->role->nama_role == 'admin') {
@@ -29,7 +34,9 @@ class PageController extends Controller
 
     public function DataPengguna()
     {
-        $datapengguna = Profile::orderByDesc('nama_lengkap');
+        $datapengguna = User::with(['profile'])->orderByDesc('role_id')->get();
+
+        dd($datapengguna);
 
         if (auth()->user()->role->nama_role == 'admin') {
             return view('admin.admin-data-pengguna', [

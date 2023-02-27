@@ -2,8 +2,16 @@
   @csrf
   <div class="col-3 d-flex flex-column align-items-center">
     <div class="foto-profile">
-      <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="w-100 h-100" alt="">
+      @if (auth()->user()->profile->foto == null)
+          <p class="d-flex justify-content-center align-items-center">Foto Profile</p>
+      @else
+      <img src="{{ asset('storage/' . auth()->user()->profile->foto) }}" class="w-100 h-100" alt="">
+      @endif
     </div>
+
+    <input {{ $status ? '' : "disabled" }} wire:model='foto' type="file" class="mt-3">
+    @error('photo') <span class="error">{{ $message }}</span> @enderror
+
     <div class="akunnya w-100">
       <div class="form-group w-100">
         <label for="email">Email</label>
@@ -61,28 +69,19 @@
         <div class="input-profile">
           <div class="form-group" style="width: 304.5px">
             <label for="Agama-profile">Agama</label>
-            <select wire:change='$emit("getagama")' {{ $status ? '' : "disabled" }} class="w-100" id="Agama-profile">
-              <option value="Islam">Islam</option>
-              <option value="Kristen">Kristen</option>
-              <option value="Protestan">Protestan</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Budha">Budha</option>
-            </select>
+            <input wire:model='agama' type="text" {{ $status ? '' : "disabled" }} class="form-control w-100" id="Agama-profile">
           </div>
 
           <div class="form-group" style="width: 304.5px">
             <label for="JK-profile">Jenis Kelamin</label>
-            <select wire:change='$emit("getjk")' wire:ignore {{ $status ? '' : "disabled" }} class="w-100" id="JK-profile">
-              <option value="Laki-Laki">Laki-Laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
+            <input type="text" wire:model='jk' {{ $status ? '' : "disabled" }} class="form-control w-100" id="JK-profile">
           </div>
         </div>
 
         <div class="form-group w-100">
           <label for="alamat">Alamat</label>
           <textarea {{ $status ? '' : "disabled" }} wire:model='alamat'
-          id="alamat" rows="3" class="w-100 border p-2 rounded-2" placeholder="alamat anda"></textarea>
+          id="alamat" rows="3" class="p-2 input-form input-form-lg h-auto placeholder-m-r" placeholder="alamat anda"></textarea>
         </div>
 
       </div>
@@ -95,17 +94,3 @@
       style="background: #4ca1af;" type="submit">{{ $status ? 'Simpan' : 'Edit Profile' }}</button>
   </div>
 </form>
-
-@push('scripts')
-  <script>
-    Livewire.on('getagama', function () {
-      var value = document.querySelector('#Agama-profile').value;
-      Livewire.emit('setagama', value);
-    })
-
-    Livewire.on('getjk', function () {
-      var value = document.querySelector('#JK-profile').value;
-      Livewire.emit('setjk', value);
-    })
-  </script>
-@endpush

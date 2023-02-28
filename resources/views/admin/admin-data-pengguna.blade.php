@@ -17,11 +17,15 @@
             <tbody>
                 <tr>
                     @foreach ($datapenggunas as $datapengguna)
-                        <td style="gap: 24px;">
-                            <div class="col-12 d-flex flex-column" style="margin-top: 48px;">
+                        <td>
+                            <div class="col-12 d-flex flex-column" style="margin-top: 48px; margin-left: 36px">
                                 <div class="admin-pengguna">
                                     <div class="gambar-profile w-100 h-100">
-                                        <img src="{{ asset('storage/' . $datapengguna->profile->foto) }}" class="foto-pengguna w-100 h-100" alt="">
+                                        @if ($datapengguna->profile->foto == null)
+                                            <p class="header-m text-neutral-70">P</p>
+                                        @else
+                                            <img src="{{ asset('storage/' . $datapengguna->profile->foto) }}" class="foto-pengguna w-100 h-100" alt="">
+                                        @endif
                                     </div>
                     
                                     <div class="keterangan-profile w-100 h-100">

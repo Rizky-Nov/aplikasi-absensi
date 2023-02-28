@@ -9,9 +9,9 @@
       @endif
     </div>
 
-    <input {{ $status ? '' : "disabled" }} wire:model='foto' type="file" class="mt-3">
+    <input {{ $status ? '' : "disabled" }} wire:model='foto' type="file" class="mt-3" style="">
     @error('photo') <span class="error">{{ $message }}</span> @enderror
-
+    
     <div class="akunnya w-100">
       <div class="form-group w-100">
         <label for="email">Email</label>

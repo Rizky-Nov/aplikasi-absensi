@@ -65,3 +65,10 @@ input[disabled], textarea[disabled], select[disabled] {
 .form-control{
     height: 48px;
 }
+
+/* .apafoto input {
+    height: 36px !important;
+    width: 100px !important;
+
+    background: black !important;
+} */

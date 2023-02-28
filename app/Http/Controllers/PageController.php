@@ -34,9 +34,7 @@ class PageController extends Controller
 
     public function DataPengguna()
     {
-        $datapengguna = User::with(['profile'])->orderByDesc('role_id')->get();
-
-        dd($datapengguna);
+        $datapengguna = User::with(['profile'])->orderByDesc('role_id');
 
         if (auth()->user()->role->nama_role == 'admin') {
             return view('admin.admin-data-pengguna', [
@@ -65,6 +63,7 @@ class PageController extends Controller
     
     public function AbseniBulanan()
     {
+        
         return view('admin.admin-data-absensi-bulanan');
     }
 }

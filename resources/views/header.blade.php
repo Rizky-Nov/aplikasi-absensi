@@ -14,19 +14,9 @@
             <div class="col-6 d-flex align-items-end flex-column">
                 <div class="d-flex col-12 p-0 m-0 h-100">
                     <div class="col-12 d-flex justify-content-center align-items-center w-100">
-                        <div class="col-6 d-flex justify-content-end align-items-center h-100">
-                            <a wire:poll href="javascript:history.back()/{{ auth()->user()->profile->id }}">  
-                                @if (auth()->user()->profile->foto == null)
-                                    <p class="kotak-profile me-2 header-m">P</p>
-                                @else
-                                    <img src="{{ asset('storage/' . auth()->user()->profile->foto) }}" class="kotak-profile me-2" alt="">
-                                @endif
+                        
+                        <livewire:foto-profile />
 
-                                {{-- <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt=""> --}}
-                            </a>
-                
-                            <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>
-                        </div>
                     </div>
                 </div>
             </div>

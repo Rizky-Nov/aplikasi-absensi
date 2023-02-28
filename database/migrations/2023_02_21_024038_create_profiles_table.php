@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('jenis_kelamin')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->date('tgl_lahir')->nullable();
-            $table->string('foto')->nullable();
+            $table->date('foto')->nullable();
             $table->timestamps();
         });
     }

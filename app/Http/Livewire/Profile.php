@@ -66,6 +66,7 @@ class Profile extends Component
             'tgl_lahir' => $this->tgllahir,
             'foto' => $url,
         ]);
+        $this->emit('aploud');
     }
 
     public function render()

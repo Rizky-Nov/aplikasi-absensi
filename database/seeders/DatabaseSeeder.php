@@ -30,9 +30,34 @@ class DatabaseSeeder extends Seeder
             'nama_role' => 'admin',
         ]);
 
-        // Hari::create([
-        //     'hari' => ''
-        // ]);
+        Hari::create([
+            'kode' => 'Mon',
+            'hari' => 'Senin',
+        ]);
+        Hari::create([
+            'kode' => 'Tue',
+            'hari' => 'Selasa',
+        ]);
+        Hari::create([
+            'kode' => 'Wed',
+            'hari' => 'Rabu',
+        ]);
+        Hari::create([
+            'kode' => 'Thu',
+            'hari' => 'Kamis',
+        ]);
+        Hari::create([
+            'kode' => 'Fri',
+            'hari' => 'Jum`at',
+        ]);
+        Hari::create([
+            'kode' => 'Sat',
+            'hari' => 'Sabtu',
+        ]);
+        Hari::create([
+            'kode' => 'Sun',
+            'hari' => 'Minggu',
+        ]);
 
         // User::factory()->create([
         //     'email' => 'admin@gmail.com',

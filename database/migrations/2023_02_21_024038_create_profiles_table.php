@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('nama_lengkap')->nullable();
             $table->text('alamat')->nullable();
-            $table->integer('no_telp')->nullable();
+            $table->string('no_telp')->nullable();
             $table->string('agama')->nullable();
             $table->string('jenis_kelamin')->nullable();
             $table->string('tempat_lahir')->nullable();

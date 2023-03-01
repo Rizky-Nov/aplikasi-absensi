@@ -11,8 +11,8 @@ class Hari extends Model
 
     protected $guarded = ['id'];
 
-    public function absensi()
+    public function detailhariabsen()
     {
-        return $this->hasMany(Absensi::class);
+        return $this->hasMany(DetailHariAbsen::class);
     }
 }

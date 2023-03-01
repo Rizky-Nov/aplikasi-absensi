@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hari_id')->constrained();
             $table->time('jam_mulai');
             $table->time('jam_kadaluarsa');
             $table->date('tanggal_mulai');

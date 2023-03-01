@@ -55,9 +55,10 @@
         </div>
 
         <div class="separator w-100"></div>
-        <p class="text-l-medium text-neutral-100 ps-5">Lama Absensi</p>
+        
+        <p class="header-s text-neutral-80 ps-5">Lama Absensi</p>
 
-        <div class="col-10 d-flex p-0 m-0">
+        <div class="col-10 d-flex h-50 p-0 m-0">
             
             <livewire:create-absensi />
 

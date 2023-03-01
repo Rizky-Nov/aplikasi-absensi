@@ -11,14 +11,14 @@ class Absensi extends Model
 
     protected $guarded = ['id'];
 
-    public function hari()
-    {
-        return $this->belongsTo(Hari::class);
-    }
+    // public function hari()
+    // {
+    //     return $this->belongsTo(Hari::class);
+    // }
 
-    public function detailabsensi()
+    public function detailhariabsen()
     {
-        return $this->hasMany(DetailAbsensi::class);
+        return $this->hasMany(DetailHariAbsen::class);
     }
 
 }

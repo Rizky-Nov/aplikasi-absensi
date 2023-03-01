@@ -17,7 +17,7 @@
                 <div class="separator w-100"></div>
 
                 <div class="">
-                    {{ date('H-i-s') }}
+                    {{ date('h-i-s') }}
                 </div>
             </div>
             

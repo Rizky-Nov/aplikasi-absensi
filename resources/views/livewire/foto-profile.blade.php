@@ -10,14 +10,17 @@
         {{-- <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt=""> --}}
     </a>
 
-    <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>
+    @if (auth()->user()->profile->nama_lengkap == null)
+        <span></span>
+    @else
+        <span class="header-s text-neutral-10">{{ auth()->user()->profile->nama_lengkap }}</span>
+    @endif
 </div>
 
 @push('scripts')
     <script>
       Livewire.on('aploud', function () {
           Livewire.emit('fresh');
-          // console.log('aploudadasdajsdyasdmasjdkashuydtsahgvanbsdvsajdfyh');
       })
     </script>
 @endpush

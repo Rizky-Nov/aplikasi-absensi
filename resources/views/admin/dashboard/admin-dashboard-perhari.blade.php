@@ -40,4 +40,14 @@
             </div>
         </div>
     </div>
+
+    @if (session()->has('berhasil'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(() => {
+                    Livewire.emit('toastify', ['success', {{ session('berhasil') }}, 3500]);
+                }, 500);
+            });
+        </script>
+    @endif
 </x-title>

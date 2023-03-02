@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,10 +26,22 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        if(Auth::attempt($credit)){
-            return redirect('/home');
+
+        $user = User::where('email', $request->email)->first();
+
+        $nama = Str::beforeLast( $request->email, '@');
+        // dd($user);
+        
+        if ($user->profile->nama_lengkap == null) {
+            if(Auth::attempt($credit)){
+                return redirect("/profile/$user->id")->with('berhasil', 'Selamat Datang' . $nama);
+            }
+        } else {
+            if(Auth::attempt($credit)){
+                return redirect('/home')->with('berhasil', 'Selamat Datang' . $nama);
+            }
         }
-        return redirect('/')->with('error', 'anda gagal untuk login');
+        return redirect('/')->with('gagal', 'anda gagal untuk login');
 
     }
 

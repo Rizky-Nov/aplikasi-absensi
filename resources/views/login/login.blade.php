@@ -20,7 +20,7 @@
         <div class="kotak-luar-login col-8 d-flex flex-column">
             <div class="d-flex col-8 justify-content-center" style="position: absolute; border-radius: 12px;">
                 <div class="kotak-kiri-login col-6">
-                    <h1 style="color: #FFFFFF"></h1>
+                    <img src="{{ asset('icon/icon2.png') }}" style="width: 110px; height: 110px;" alt="">
                 </div>
     
                 <div class="kotak-kanan-login col-6">
@@ -70,11 +70,20 @@
 
     @if (session()->has('Berhasil Register'))
         <script>
-         document.addEventListener('DOMContentLoaded', function () {
-             setTimeout(() => {
-                 Livewire.emit('toastify', ['success', 'Berhasil Melakukan Register', 3500]);
-             }, 500);
-         });
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(() => {
+                    Livewire.emit('toastify', ['success', 'Berhasil Melakukan Register', 3500]);
+                }, 500);
+            });
+         </script>
+        
+    @elseif (session()->has('gagal'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(() => {
+                    Livewire.emit('toastify', ['danger', 'Login Gagal !!', 3500]);
+                }, 500);
+            });
         </script>
     @endif
 

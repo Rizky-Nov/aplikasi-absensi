@@ -8,11 +8,10 @@
             <div class="side-bar h-100 w-100">
                 <div class="w-100" style="padding: 14px">
                     <div class="logo w-100">
-                        <p class="header-m text-neutral-10">ABSENSI</p>
+                        <img src="{{ asset('icon/Icon2.png') }}" style="width: 64px; height: 64px;" alt="">
                     </div>
-            
-                    <div class="separator w-100"></div>
-                </div>
+                        <div class="separator w-100"></div>
+                    </div>
         
                 <div class="untuk-menu w-100 " style="padding-left: 14px">
                     <div class="menus-luar w-100 h-100">
@@ -51,7 +50,7 @@
             <div class="side-bar h-100 w-100">
                 <div class="w-100" style="padding: 14px">
                     <div class="logo w-100">
-                        <p class="header-m text-neutral-10">ABSENSI</p>
+                        <img src="{{ asset('icon/Icon2.png') }}" style="width: 36px; height: 36px;" alt="">
                     </div>
             
                     <div class="separator w-100"></div>

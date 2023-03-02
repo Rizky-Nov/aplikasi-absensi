@@ -63,7 +63,10 @@ class PageController extends Controller
     
     public function AbseniBulanan()
     {
+        $detailabsensis = DetailAbsensi::groupBy('absen');
         
-        return view('admin.admin-data-absensi-bulanan');
+        return view('admin.admin-data-absensi-bulanan', [
+            'detailabsensis' => $detailabsensis->get(),
+        ]);
     }
 }

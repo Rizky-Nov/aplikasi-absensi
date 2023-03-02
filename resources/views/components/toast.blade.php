@@ -1,9 +1,9 @@
 {{-- @push('scripts') --}}
     <script>
         let toastColor = {
-            'danger' : 'linear-gradient(to right, #e35d5b, #e53935)',
-            'warning' : 'linear-gradient(to right, #ffff80, #fdfc47)',
-            'success' : 'linear-gradient(to right, #43936C, #43936C)',
+            'success' : 'linear-gradient(to right, #00ff87, #60efff)',
+            'warning' : 'linear-gradient(to right, #e89d1f, #e4e95d)',
+            'danger' : 'linear-gradient(to right, #ea5753, #ffb88e)',
             'primary' : '',
             'secondary' : ''
         }
@@ -13,7 +13,6 @@
                 text: text,
                 duration: timer,
                 newWindow: true,
-                // close: true,
                 stopOnFocus: true,
                 className: 'text-l-medium rounded mt-5 me-5',
 

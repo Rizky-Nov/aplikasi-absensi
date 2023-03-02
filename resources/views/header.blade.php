@@ -11,9 +11,9 @@
                 </div>
             </div>
             
-            <div class="col-6 d-flex align-items-end flex-column">
+            <div class="col-6 h-100 d-flex align-items-end flex-column">
                 <div class="d-flex col-12 p-0 m-0 h-100">
-                    <div class="col-12 d-flex justify-content-center align-items-center w-100">
+                    <div class="col-12 d-flex justify-content-center align-items-center h-100 w-100">
                         
                         <livewire:foto-profile />
 
@@ -33,7 +33,7 @@
             
             <div class="col-6 d-flex align-items-end flex-column">
                 <div class="d-flex col-12 p-0 m-0 h-100">
-                    <div class="col-12 d-flex justify-content-center align-items-center w-100">
+                    <div class="col-12 h-100 d-flex justify-content-center align-items-center w-100">
                         <div class="col-6 d-flex justify-content-end align-items-center h-100">
                             <a wire:poll href="/profile/{{ auth()->user()->profile->id }}">
                                 @if (auth()->user()->profile->foto == null)
@@ -45,7 +45,11 @@
                                 {{-- <img src="{{ asset('gambar/profile-contoh.jpg') }}" class="kotak-profile me-2" alt=""> --}}
                             </a>
                 
-                            <span class="header-s text-neutral-10">{{ auth()->user()->email }}</span>
+                            @if (auth()->user()->profile->nama_lengkap == null)
+                                <span></span>
+                            @else
+                                <span class="header-s text-neutral-10">{{ auth()->user()->profile->nama_lengkap }}</span>
+                            @endif
                         </div>
 
                         <div class="col-6 d-flex justify-content-end h-100">

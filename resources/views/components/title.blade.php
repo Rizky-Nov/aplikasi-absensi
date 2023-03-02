@@ -57,5 +57,10 @@
             loader.style.display = 'none';
         }, 2000);
     </script>
+    @if (auth()->user()->profile->nama_lengkap == null && !Request::is('profile*'))
+        <script>
+            top.location = "/profile/{{ auth()->user()->id }}";
+        </script>
+    @endif
 </body>
 </html>

@@ -90,7 +90,7 @@
   </div>
 
   <div class="col w-100 d-flex justify-content-center" style="height: 36px;">
-      <button class="btn text-neutral-10 text-m-regular w-100"
+      <button class="btn text-neutral-10 text-m-regular w-100" 
       style="background: #4ca1af;" type="submit">{{ $status ? 'Simpan' : 'Edit Profile' }}</button>
   </div>
 </form>

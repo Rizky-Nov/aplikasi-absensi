@@ -12,7 +12,8 @@ class FotoProfile extends Component
 
     public function fresh()
     {
-        $this->listener();
+        dd("masuk ga bang");
+        $this->render();
     }
 
     public function render()

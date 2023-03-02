@@ -41,7 +41,7 @@ class Profile extends Component
     {
         if ($this->status == false) {
             $this->status = true;
-        } elseif ($this->status == true) {
+        } elseif ($this->status) {
             $this->edit();
             $this->status = false;
         }
@@ -50,11 +50,13 @@ class Profile extends Component
     public function edit()
     {   
         $getprofile = ModelsProfile::find($this->profile_id);
-        $this->validate([
-            'foto' => 'image|max:2048'
-        ]);
-
-        $url = $this->foto->store('foto-profile');
+        $url = '';
+        if ($this->foto != null) {
+            $this->validate([
+                'foto' => 'image|max:2048'
+            ]);
+            $url = $this->foto->store('foto-profile');
+        }
         
         $getprofile->update([
             'nama_lengkap' => $this->namalengkap,
@@ -66,7 +68,7 @@ class Profile extends Component
             'tgl_lahir' => $this->tgllahir,
             'foto' => $url,
         ]);
-        $this->emit('aploud');
+        $this->emit('upload');
     }
 
     public function render()

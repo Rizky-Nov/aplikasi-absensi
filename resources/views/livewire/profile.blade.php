@@ -41,13 +41,13 @@
         <div class="input-profile">
           <div class="form-group" style="width: 411px">
             <label for="nama-profile">Nama Lengkap</label>
-            <input type="text" {{ $status ? '' : "disabled" }} wire:model='namalengkap' 
+            <input type="text" {{ $status ? '' : "disabled" }} wire:model.lazy='namalengkap' 
             id="nama-profile" class="form-control w-100" placeholder="nama lengkap anda">
           </div>
 
           <div class="form-group" style="width: 305px">
             <label for="No-profile">No Telephone</label>
-            <input type="text" {{ $status ? '' : "disabled" }} wire:model='notelp'
+            <input type="text" {{ $status ? '' : "disabled" }} wire:model.lazy='notelp'
             id="No-profile" class="form-control w-100" placeholder="+62 812 8429 2341">
           </div>
         </div>
@@ -55,13 +55,13 @@
         <div class="input-profile">
           <div class="form-group" style="width: 250.5px">
             <label for="TL-profile">Tempat Lahir</label>
-            <input type="text" {{ $status ? '' : "disabled" }} wire:model='tempatlahir'
+            <input type="text" {{ $status ? '' : "disabled" }} wire:model.lazy='tempatlahir'
             id="TL-profile" class="form-control w-100" placeholder="tempat lahir anda">
           </div>
 
           <div class="form-group" style="width: 250.5px">
             <label for="TGL-profile">Tanggal Lahir</label>
-            <input type="date" {{ $status ? '' : "disabled" }} wire:model='tgllahir'
+            <input type="date" {{ $status ? '' : "disabled" }} wire:model.lazy='tgllahir'
             id="TGL-profile" class="form-control w-100" placeholder="Tanggal Lahir">
           </div>
         </div>
@@ -69,18 +69,18 @@
         <div class="input-profile">
           <div class="form-group" style="width: 304.5px">
             <label for="Agama-profile">Agama</label>
-            <input wire:model='agama' type="text" {{ $status ? '' : "disabled" }} class="form-control w-100" id="Agama-profile">
+            <input wire:model.lazy='agama' type="text" {{ $status ? '' : "disabled" }} class="form-control w-100" id="Agama-profile">
           </div>
 
           <div class="form-group" style="width: 304.5px">
             <label for="JK-profile">Jenis Kelamin</label>
-            <input type="text" wire:model='jk' {{ $status ? '' : "disabled" }} class="form-control w-100" id="JK-profile">
+            <input type="text" wire:model.lazy='jk' {{ $status ? '' : "disabled" }} class="form-control w-100" id="JK-profile">
           </div>
         </div>
 
         <div class="form-group w-100">
           <label for="alamat">Alamat</label>
-          <textarea {{ $status ? '' : "disabled" }} wire:model='alamat'
+          <textarea {{ $status ? '' : "disabled" }} wire:model.lazy='alamat'
           id="alamat" rows="3" class="p-2 input-form input-form-lg h-auto placeholder-m-r" placeholder="alamat anda"></textarea>
         </div>
 

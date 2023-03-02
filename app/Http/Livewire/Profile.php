@@ -34,6 +34,7 @@ class Profile extends Component
         $this->agama = $profile->agama;
         $this->jk = $profile->jenis_kelamin;
         $this->tempatlahir = $profile->tempat_lahir;
+        $this->tgllahir = $profile->tgl_lahir;
         $this->foto = $profile->foto;
     }
 

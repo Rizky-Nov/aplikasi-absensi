@@ -17,7 +17,10 @@ class AbsensiFactory extends Factory
     public function definition()
     {
         return [
-            
+            'jam_mulai' => fake()->time(),
+            'jam_kadaluarsa' => fake()->time(),
+            'tanggal_mulai' => fake()->date(),
+            'tanggal_kadaluarsa' => fake()->date(),
         ];
     }
 }

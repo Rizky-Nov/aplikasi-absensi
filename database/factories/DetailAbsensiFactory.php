@@ -18,11 +18,12 @@ class DetailAbsensiFactory extends Factory
     {
         return [
             // 'absensi_id' => 1,
+            'detail_hari_absen_id' => 1,
             'profile_id' => fake()->randomNumber(1, true),
             'jam_absen' => fake()->time(),
             'absen' => fake()->randomElement(['hadir', 'sakit', 'izin', 'alpa']),
             'keterangan' => fake()->randomLetter(),
-            'foto' => 'profile/profile-contoh.jpg',
+            // 'foto' => 'foto-profile/profile-contoh.jpg',
         ];
     }
 }

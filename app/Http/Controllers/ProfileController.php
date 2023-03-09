@@ -10,6 +10,7 @@ class ProfileController extends Controller
 {
     public function Profile(Profile $profile)
     {
+        // dd($profile);
         if (auth()->user()->profile->id == $profile->id && auth()->user()->id == $profile->user_id) {
             return view('profile.profile', ['profile' => $profile]);
         }

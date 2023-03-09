@@ -59,7 +59,7 @@
     </script>
     @if (auth()->user()->profile->nama_lengkap == null && !Request::is('profile*'))
         <script>
-            top.location = "/profile/{{ auth()->user()->id }}";
+            top.location = "/profile/{{ auth()->user()->profile->id }}";
         </script>
     @endif
 </body>

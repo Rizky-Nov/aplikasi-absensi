@@ -30,7 +30,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         $nama = Str::beforeLast( $request->email, '@');
-        // dd($user);
+        // dd(Auth::attempt($credit));
         
         if ($user->profile->nama_lengkap == null) {
             if(Auth::attempt($credit)){

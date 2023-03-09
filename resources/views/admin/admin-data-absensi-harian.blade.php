@@ -18,7 +18,7 @@
 
             <tbody>
                 <tr>
-                    @foreach ( $detailabsensis as $detailabsensi )
+                    @foreach ($detailabsensis as $detailabsensi )
                         <td>
                             <div class="card-absen">
                                 <div class="data-gambar">
